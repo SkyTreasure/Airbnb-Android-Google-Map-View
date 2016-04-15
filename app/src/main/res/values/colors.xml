@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b1c7</color>
+    <color name="colorPrimaryDark">#0097a9</color>
+    <color name="colorAccent">#00b1c7</color>
+
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#EEEEEE</color>
+    <color name="navigationBarColor">#44424242</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_opaque">#FFFFFFFF</color>
+    <color name="white_transparent">#99FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="filter_bg">#eeffffff</color>
+    <color name="red">#990000</color>
+    <color name="green">#009900</color>
+    <color name="blue">#000099</color>
+    <color name="orange">#FF9900</color>
+    <color name="yellow">#ffbf00</color>
+    <color name="filter_red">#ff5240</color>
+    <color name="header_color">#080808</color>
+    <color name="setup_store_bg">#787878</color>
+    <color name="g_bule_bg">#00b1c7</color>
+    <color name="g_green_bg">#19c594</color>
+    <color name="g_dark_blue">#0097a9</color>
+    <color name="featured_dots_active">#9D9D9D</color>
+    <color name="purple">#8e76c6</color>
+</resources>
