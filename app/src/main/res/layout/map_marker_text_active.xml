@@ -15,7 +15,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="0dp"
             android:background="@mipmap/map_pin_green"
-            android:drawableLeft="@mipmap/deals_icon"
+            android:drawableLeft="@drawable/star_icon_white"
             android:drawablePadding="8dp"
             android:gravity="center_vertical|center"
             android:paddingBottom="7dp"

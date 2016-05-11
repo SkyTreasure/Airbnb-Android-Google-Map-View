@@ -3,6 +3,9 @@
     <color name="colorPrimary">#00b1c7</color>
     <color name="colorPrimaryDark">#0097a9</color>
     <color name="colorAccent">#00b1c7</color>
+    <color name="gomalan_bule_bg">#00b1c7</color>
+    <color name="gomalan_green_bg">#19c594</color>
+    <color name="gomalon_dark_blue">#0097a9</color>
 
 
     <color name="textColorPrimary">#FFFFFF</color>

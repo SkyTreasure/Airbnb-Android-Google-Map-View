@@ -47,15 +47,21 @@ public class MapFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.deal_card_layout, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.map_view_item, container, false);
         try {
             mImageLoader = CustomVolleyRequestQueue.getInstance(getActivity()).getImageLoader();
 
             tvTitle = (TextView) rootView.findViewById(R.id.tv_title);
-            tvDescription = (TextView) rootView.findViewById(R.id.tv_description);
+            tvDescription = (TextView) rootView.findViewById(R.id.tv_categories);
+            tvLocation=(TextView)rootView.findViewById(R.id.tv_offers);
+            tvRating=(TextView)rootView.findViewById(R.id.tv_rating);
+            tvDistanceInKm=(TextView)rootView.findViewById(R.id.tv_distanceinkm);
 
-            tvTitle.setText(getDealModel().getAddressType());
-            tvDescription.setText(getDealModel().getLine1() + getDealModel().getLine2());
+            tvTitle.setText(getDealModel().getLine1());
+            tvDescription.setText(getDealModel().getLine2());
+            tvLocation.setText(getDealModel().getCity());
+            tvDistanceInKm.setText(getDealModel().getDistance());
+            tvRating.setText(getDealModel().getRating());
 
             return rootView;
 

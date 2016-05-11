@@ -50,6 +50,15 @@ public class AddressModel extends BaseModel {
     @SerializedName("default")
     @Expose
     private Boolean _default;
+    @SerializedName("image")
+    @Expose
+    private String image;
+    @SerializedName("rating")
+    @Expose
+    private String rating;
+    @SerializedName("distance")
+    @Expose
+    private String distance;
 
 
     /**
@@ -171,5 +180,29 @@ public class AddressModel extends BaseModel {
 
     public void set_default(Boolean _default) {
         this._default = _default;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }

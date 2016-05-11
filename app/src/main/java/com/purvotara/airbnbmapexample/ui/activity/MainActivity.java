@@ -103,17 +103,17 @@ public class MainActivity extends AppCompatActivity implements
                             View view = View.inflate(MainActivity.this, R.layout.map_marker_text, null);
                             TextView tvVendorTitle;
                             tvVendorTitle = (TextView) view.findViewById(R.id.tv_vendor_title);
-                            tvVendorTitle.setText(myDealsList.get(j).getAddressType());
+                            tvVendorTitle.setText(myDealsList.get(j).getRating());
                             iconFactory.setContentView(view);
 
-                            options.icon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(myDealsList.get(j).getAddressType())));
+                            options.icon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(myDealsList.get(j).getRating())));
                             options.anchor(iconFactory.getAnchorU(), iconFactory.getAnchorV());
                             options.position(newLatLngTemp);
                             options.snippet(String.valueOf(j));
 
                             Marker mapMarker = mMap.addMarker(options);
                             mMarkerList.add(mapMarker);
-                            mDealMap.put(myDealsList.get(j).getAddressType(), myDealsList.get(j));
+                            mDealMap.put(myDealsList.get(j).getRating(), myDealsList.get(j));
 
                             // currentLatLng=newLatLngTemp;
                         }
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements
 
                         iconFactory.setContentView(view);
                         //prevVendorName = myDealsList.get(position).getmVendorName();
-                        prevMarker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getAddressType())));
+                        prevMarker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getRating())));
 
                     }
 
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements
                         TextView tvVendorTitle;
 
                         tvVendorTitle = (TextView) view.findViewById(R.id.tv_vendor_title);
-                        tvVendorTitle.setText(myDealsList.get(position).getAddressType());
+                        tvVendorTitle.setText(myDealsList.get(position).getRating());
                         //tvVendorTitle.setBackground(getResources().getDrawable(R.mipmap.map_pin_green));
                         //tvVendorTitle.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.mipmap.deals_icon), null, null, null);
                         // tvVendorTitle.setTextColor(Color.parseColor("#FFFFFF"));
@@ -192,11 +192,11 @@ public class MainActivity extends AppCompatActivity implements
                         //
                         marker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon()));
                         prevMarker = marker;
-                        prevVendorName = myDealsList.get(position).getAddressType();
+                        prevVendorName = myDealsList.get(position).getRating();
 
                     }
                     prevMarker = marker;
-                    prevVendorName = myDealsList.get(position).getAddressType();
+                    prevVendorName = myDealsList.get(position).getRating();
                     flag = true;
                 } else {
                     Log.i("", "" + mMarkerList);
@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity implements
 
                 iconFactory.setContentView(view);
 
-                prevMarker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getAddressType())));
+                prevMarker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getRating())));
 
             }
 
@@ -275,21 +275,21 @@ public class MainActivity extends AppCompatActivity implements
                 TextView tvVendorTitle;
 
                 tvVendorTitle = (TextView) view.findViewById(R.id.tv_vendor_title);
-                tvVendorTitle.setText(myDealsList.get(Integer.parseInt(marker.getSnippet())).getAddressType());
+                tvVendorTitle.setText(myDealsList.get(Integer.parseInt(marker.getSnippet())).getRating());
 
 
                 tvVendorTitle.setBackground(getResources().getDrawable(R.mipmap.map_pin_green));
-                tvVendorTitle.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.mipmap.deals_icon), null, null, null);
+                tvVendorTitle.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.star_icon_white), null, null, null);
                 tvVendorTitle.setTextColor(Color.parseColor("#FFFFFF"));
                 iconFactory.setContentView(view);
                 //
-                marker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getAddressType())));
+                marker.setIcon(BitmapDescriptorFactory.fromBitmap(iconFactory.makeIcon(temp.getRating())));
                 prevMarker = marker;
-                prevVendorName = myDealsList.get(Integer.parseInt(marker.getSnippet())).getAddressType();
+                prevVendorName = myDealsList.get(Integer.parseInt(marker.getSnippet())).getRating();
 
             }
             prevMarker = marker;
-            prevVendorName = myDealsList.get(Integer.parseInt(marker.getSnippet())).getAddressType();
+            prevVendorName = myDealsList.get(Integer.parseInt(marker.getSnippet())).getRating();
             mMap.moveCamera(CameraUpdateFactory.newLatLng(marker.getPosition()));
             flag = true;
         }

@@ -23,10 +23,10 @@
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_details"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="190dp"
             android:layout_gravity="bottom"
             android:layout_marginBottom="10dp"
-            android:alpha="0.85"
+            android:alpha="1"
             android:gravity="fill"
             android:visibility="visible" />
     </FrameLayout>
