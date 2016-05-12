@@ -31,4 +31,6 @@ dependencies {
     compile 'com.android.support:cardview-v7:23.3.0'
     compile 'com.android.support:recyclerview-v7:23.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.github.jd-alexander:library:1.1.0'
+    compile 'com.jakewharton:butterknife:6.1.0'
 }

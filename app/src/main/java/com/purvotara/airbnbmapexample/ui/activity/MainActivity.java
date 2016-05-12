@@ -7,6 +7,9 @@ import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -58,6 +61,12 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        getSupportActionBar().setTitle("Custom Markers and Viewpager");
+
+
         mMarkerList = new ArrayList<>();
         myDealsList = new ArrayList<AddressModel>();
         mDealMap = new HashMap<>();
@@ -343,6 +352,30 @@ public class MainActivity extends AppCompatActivity implements
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.base, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_search) {
+            Intent i=new Intent(MainActivity.this,SearchPlaceOnMapActivity.class);
+            startActivity(i);
+            return true;
+        }
+        if(id == R.id.action_show_direction){
+            Intent i=new Intent(MainActivity.this,ShowDirectionActivity.class);
+            startActivity(i);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

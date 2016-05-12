@@ -20,6 +20,7 @@
         android:drawableRight="@drawable/toolbar_close_icon"
         android:hint="Search for a location"
         android:lines="1"
+        android:textSize="14sp"
         android:maxLines="1"
         android:singleLine="true">
     </AutoCompleteTextView>

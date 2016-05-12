@@ -2,6 +2,7 @@ package com.purvotara.airbnbmapexample.ui.activity;
 
 import android.Manifest;
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.design.widget.FloatingActionButton;
@@ -12,9 +13,11 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -50,9 +53,10 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
         GoogleMap.OnCameraChangeListener,
         ActivityCompat.OnRequestPermissionsResultCallback  ,GoogleApiClient.OnConnectionFailedListener, View.OnClickListener{
 
-
-    private static final LatLngBounds BOUNDS_GREATER_INDIA = new LatLngBounds(
+    //This is for restriciting search only to india, for other countries you can specify lat lng by changing the below values.
+     private static final LatLngBounds BOUNDS_GREATER_INDIA = new LatLngBounds(
             new LatLng(8.062148, 68.212642), new LatLng(37.372499, 96.513423));
+
     protected GoogleApiClient mGoogleApiClient;
     private PlaceAutocompleteAdapter mAdapter;
     private AutoCompleteTextView mAutocompleteView;
@@ -73,7 +77,7 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
             }
             // Get the Place object from the buffer.
             final Place place = places.get(0);
-
+            hideKeyboard();
             mLatitude=String.valueOf(place.getLatLng().latitude);
             mLongitude=String.valueOf(place.getLatLng().longitude);
             LatLng newLatLngTemp = new LatLng(place.getLatLng().latitude, place.getLatLng().longitude);
@@ -113,6 +117,8 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_place_on_map);
 
+        getSupportActionBar().setTitle("Search Places");
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -127,7 +133,13 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
                 .addApi(Places.GEO_DATA_API)
                 .build();
         mAdapter = new PlaceAutocompleteAdapter(this, R.layout.google_places_search_items,
+                mGoogleApiClient, null, null);
+
+        //TODO:In order to Restrict search to India uncomment this and comment the above line
+        /*
+        mAdapter = new PlaceAutocompleteAdapter(this, R.layout.google_places_search_items,
                 mGoogleApiClient, BOUNDS_GREATER_INDIA, null);
+         */
         mAutocompleteView.setAdapter(mAdapter);
         mAutocompleteView.setOnItemClickListener(mAutocompleteClickListener);
 
@@ -274,11 +286,10 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
             case R.id.fab_add:
                 mLatitude=mMap.getCameraPosition().target.latitude+"";
                 mLongitude=mMap.getCameraPosition().target.longitude+"";
-                Intent i=new Intent();
-                i.putExtra(NetworkConstants.LATITUDE,mLatitude);
-                i.putExtra(NetworkConstants.LONGITUDE,mLongitude);
+
                // setResult(NetworkConstants.SHOW_ME_IN_MAP_REQUEST,i);
-                finish();
+                Toast.makeText(SearchPlaceOnMapActivity.this, "Latitude:"+mLatitude +" Longitude:"+mLongitude,Toast.LENGTH_LONG).show();
+                //finish();
                 break;
         }
     }
@@ -286,5 +297,15 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
+    }
+
+
+    public void hideKeyboard() {
+        // Check if no view has focus:
+        View view = this.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 }
