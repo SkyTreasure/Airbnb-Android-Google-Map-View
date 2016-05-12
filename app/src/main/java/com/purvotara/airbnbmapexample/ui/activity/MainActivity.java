@@ -115,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements
                             mMarkerList.add(mapMarker);
                             mDealMap.put(myDealsList.get(j).getRating(), myDealsList.get(j));
 
-                            // currentLatLng=newLatLngTemp;
                         }
                         if (myDealsList.size() > 0) {
                             LatLng latlngOne = new LatLng(Double.parseDouble(myDealsList.get(0).getLatitude()), Double.parseDouble(myDealsList.get(0).getLongitude()));
@@ -183,10 +182,6 @@ public class MainActivity extends AppCompatActivity implements
 
                         tvVendorTitle = (TextView) view.findViewById(R.id.tv_vendor_title);
                         tvVendorTitle.setText(myDealsList.get(position).getRating());
-                        //tvVendorTitle.setBackground(getResources().getDrawable(R.mipmap.map_pin_green));
-                        //tvVendorTitle.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.mipmap.deals_icon), null, null, null);
-                        // tvVendorTitle.setTextColor(Color.parseColor("#FFFFFF"));
-
 
                         iconFactory.setContentView(view);
                         //
@@ -224,13 +219,8 @@ public class MainActivity extends AppCompatActivity implements
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setOnMarkerClickListener(this);
-
-        // Add a marker in Sydney and move the camera
         mMap.setOnMapClickListener(this);
-
-
         mAddressModel.fetchAddressFromServer();
-
     }
 
 

@@ -36,7 +36,8 @@
 
         <activity
             android:name=".ui.activity.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".ui.activity.SearchPlaceOnMapActivity"></activity>
     </application>
 
 </manifest>
