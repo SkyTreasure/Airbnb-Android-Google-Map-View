@@ -12,7 +12,7 @@ import com.purvotara.airbnbmapexample.ui.fragment.MapFragment;
 import java.util.List;
 
 /**
- * Created by akash on 14/3/16.
+ * Created by skyrreasure on 14/3/16.
  */
 public class MapAdapter extends FragmentPagerAdapter {
     LayoutInflater layoutInflater;

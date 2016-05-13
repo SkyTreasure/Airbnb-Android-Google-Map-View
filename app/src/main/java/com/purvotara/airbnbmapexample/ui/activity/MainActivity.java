@@ -35,6 +35,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Created by skyrreasure on 12/5/16.
+ */
 public class MainActivity extends AppCompatActivity implements
         GoogleMap.OnMarkerClickListener,
         GoogleMap.OnInfoWindowClickListener,

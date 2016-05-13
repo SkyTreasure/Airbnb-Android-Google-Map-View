@@ -54,7 +54,9 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-
+/**
+ * Created by skyrreasure on 12/5/16.
+ */
 public class ShowDirectionActivity extends AppCompatActivity implements RoutingListener, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
 
@@ -62,7 +64,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
 
     protected LatLng start;
     protected LatLng end;
-       @InjectView(R.id.start)
+    @InjectView(R.id.start)
     AutoCompleteTextView starting;
     @InjectView(R.id.destination)
     AutoCompleteTextView destination;
@@ -77,8 +79,8 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
 
 
     private List<Polyline> polylines;
-    private double mLatitude=12.321432423,mLongitude=77.2342345;
-    private double toLatitude,toLongitude;
+    private double mLatitude = 12.321432423, mLongitude = 77.2342345;
+    private double toLatitude, toLongitude;
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
 
 
@@ -124,22 +126,10 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
         });
 
 
-      /*  CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(18.013610, -77.498803));
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-        map.moveCamera(center);
-        map.animateCamera(zoom);*/
-
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
             return;
         }
         locationManager.requestLocationUpdates(
@@ -148,13 +138,8 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                     @Override
                     public void onLocationChanged(Location location) {
 
-                       /* CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);*/
-                        mLatitude=location.getLatitude();
-                        mLongitude=location.getLongitude();
+                        mLatitude = location.getLatitude();
+                        mLongitude = location.getLongitude();
                     }
 
                     @Override
@@ -178,13 +163,9 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                 3000, 0, new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
-                        /*CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(12);
 
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);*/
-                        mLatitude=location.getLatitude();
-                        mLongitude=location.getLongitude();
+                        mLatitude = location.getLatitude();
+                        mLongitude = location.getLongitude();
 
                     }
 
@@ -245,9 +226,9 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
 
-                        start=place.getLatLng();
-                        mLatitude=place.getLatLng().latitude;
-                        mLongitude=place.getLatLng().longitude;
+                        start = place.getLatLng();
+                        mLatitude = place.getLatLng().latitude;
+                        mLongitude = place.getLatLng().longitude;
                     }
                 });
 
@@ -278,10 +259,10 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                         }
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
-                        toLatitude=place.getLatLng().latitude;
-                        toLongitude=place.getLatLng().longitude;
+                        toLatitude = place.getLatLng().latitude;
+                        toLongitude = place.getLatLng().longitude;
 
-                        end=place.getLatLng();
+                        end = place.getLatLng();
                     }
                 });
 
@@ -323,9 +304,8 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
 
-                if(end!=null)
-                {
-                    end=null;
+                if (end != null) {
+                    end = null;
                 }
             }
 
@@ -338,47 +318,31 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
     }
 
     @OnClick(R.id.send)
-    public void sendRequest()
-    {
-        if(Util.Operations.isOnline(this))
-        {
+    public void sendRequest() {
+        if (Util.Operations.isOnline(this)) {
             route();
-        }
-        else
-        {
-            Toast.makeText(this,"No internet connectivity",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No internet connectivity", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void route()
-    {
-        if(start==null || end==null)
-        {
-            if(start==null)
-            {
-                if(starting.getText().length()>0)
-                {
+    public void route() {
+        if (start == null || end == null) {
+            if (start == null) {
+                if (starting.getText().length() > 0) {
                     starting.setError("Choose location from dropdown.");
-                }
-                else
-                {
-                    Toast.makeText(this,"Please choose a starting point.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Please choose a starting point.", Toast.LENGTH_SHORT).show();
                 }
             }
-            if(end==null)
-            {
-                if(destination.getText().length()>0)
-                {
+            if (end == null) {
+                if (destination.getText().length() > 0) {
                     destination.setError("Choose location from dropdown.");
-                }
-                else
-                {
-                    Toast.makeText(this,"Please choose a destination.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Please choose a destination.", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
-        else
-        {
+        } else {
             progressDialog = ProgressDialog.show(this, "Please wait.",
                     "Fetching route information.", true);
             Routing routing = new Routing.Builder()
@@ -389,7 +353,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                     .build();
             routing.execute();
 
-            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mLatitude,mLongitude));
+            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mLatitude, mLongitude));
             CameraUpdate zoom = CameraUpdateFactory.zoomTo(14);
 
             map.moveCamera(center);
@@ -404,9 +368,9 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
     public void onRoutingFailure(RouteException e) {
         // The Routing request failed
         progressDialog.dismiss();
-        if(e != null) {
+        if (e != null) {
             Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-        }else {
+        } else {
             Toast.makeText(this, "Something went wrong, Try again", Toast.LENGTH_SHORT).show();
         }
     }
@@ -427,7 +391,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
         map.moveCamera(center);
 
 
-        if(polylines.size()>0) {
+        if (polylines.size() > 0) {
             for (Polyline poly : polylines) {
                 poly.remove();
             }
@@ -435,7 +399,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
 
         polylines = new ArrayList<>();
         //add route(s) to the map.
-        for (int i = 0; i <route.size(); i++) {
+        for (int i = 0; i < route.size(); i++) {
 
             //In case of more than 5 alternative routes
             int colorIndex = i % COLORS.length;
@@ -447,7 +411,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
             Polyline polyline = map.addPolyline(polyOptions);
             polylines.add(polyline);
 
-            Toast.makeText(getApplicationContext(),"Route "+ (i+1) +": distance - "+ route.get(i).getDistanceValue()+": duration - "+ route.get(i).getDurationValue(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Route " + (i + 1) + ": distance - " + route.get(i).getDistanceValue() + ": duration - " + route.get(i).getDurationValue(), Toast.LENGTH_SHORT).show();
         }
 
         // Start marker
@@ -465,8 +429,6 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
     }
 
 
-
-
     @Override
     public void onRoutingCancelled() {
         Log.i(LOG_TAG, "Routing was cancelled.");
@@ -475,7 +437,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
-        Log.v(LOG_TAG,connectionResult.toString());
+        Log.v(LOG_TAG, connectionResult.toString());
     }
 
     @Override

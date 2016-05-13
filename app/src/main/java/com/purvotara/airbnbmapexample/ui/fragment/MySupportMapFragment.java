@@ -9,7 +9,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.purvotara.airbnbmapexample.ui.widget.TouchableWrapper;
 
 /**
- * Created by akash on 5/4/16.
+ * Created by skyrreasure on 5/4/16.
  */
 public class MySupportMapFragment extends SupportMapFragment {
     public View mOriginalContentView;

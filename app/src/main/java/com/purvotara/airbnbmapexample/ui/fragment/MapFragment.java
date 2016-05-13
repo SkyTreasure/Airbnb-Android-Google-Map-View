@@ -18,7 +18,7 @@ import com.purvotara.airbnbmapexample.network.util.CustomVolleyRequestQueue;
 
 
 /**
- * Created by akash on 14/3/16.
+ * Created by skyrreasure on 14/3/16.
  */
 public class MapFragment extends Fragment {
 

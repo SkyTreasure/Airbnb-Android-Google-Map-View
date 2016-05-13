@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 /**
- * Created by akash on 6/3/16.
+ * Created by skyrreasure on 6/3/16.
  */
 public abstract class BaseModel {
     transient Context mContext;

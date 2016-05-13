@@ -1,7 +1,7 @@
 package com.purvotara.airbnbmapexample.constants;
 
 /**
- * Created by akash on 15/4/16.
+ * Created by skyrreasure on 15/4/16.
  */
 public class NetworkConstants {
 

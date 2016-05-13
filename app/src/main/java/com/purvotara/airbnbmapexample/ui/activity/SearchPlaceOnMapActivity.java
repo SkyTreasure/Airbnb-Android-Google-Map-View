@@ -39,7 +39,9 @@ import com.purvotara.airbnbmapexample.constants.NetworkConstants;
 import com.purvotara.airbnbmapexample.ui.adapter.PlaceAutocompleteAdapter;
 import com.purvotara.airbnbmapexample.ui.util.PermissionUtils;
 import com.purvotara.airbnbmapexample.ui.widget.TouchableWrapper;
-
+/**
+ * Created by skyrreasure on 12/5/16.
+ */
 public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
         GoogleMap.OnMarkerClickListener, TouchableWrapper.UpdateMapAfterUserInterection,
         GoogleMap.OnInfoWindowClickListener,
@@ -90,21 +92,11 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
             = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            /*
-             Retrieve the place ID of the selected item from the Adapter.
-             The adapter stores each Place suggestion in a PlaceAutocomplete object from which we
-             read the place ID.
-              */
-            // Toast.makeText(SearchLocationActivity.this, "Loading selected location details...", Toast.LENGTH_LONG).show();
-
 
             final PlaceAutocompleteAdapter.PlaceAutocomplete item = mAdapter.getItem(position);
             final String placeId = String.valueOf(item.placeId);
 
-            /*
-             Issue a request to the Places Geo Data API to retrieve a Place object with additional
-              details about the place.
-              */
+
             PendingResult<PlaceBuffer> placeResult = Places.GeoDataApi
                     .getPlaceById(mGoogleApiClient, placeId);
             placeResult.setResultCallback(mUpdatePlaceDetailsCallback);
@@ -153,8 +145,7 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
 
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (event.getRawX() >= (mAutocompleteView.getRight() - mAutocompleteView.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
-                        // your action here
-                        //  showToast("Clear Button Clicked");
+
                         mAutocompleteView.setText("");
 
                         return true;
@@ -183,7 +174,7 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
     private void handleIntent(Intent intent) {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
-            //showToast(query);
+
         }
     }
 
@@ -287,9 +278,8 @@ public class SearchPlaceOnMapActivity  extends AppCompatActivity implements
                 mLatitude=mMap.getCameraPosition().target.latitude+"";
                 mLongitude=mMap.getCameraPosition().target.longitude+"";
 
-               // setResult(NetworkConstants.SHOW_ME_IN_MAP_REQUEST,i);
                 Toast.makeText(SearchPlaceOnMapActivity.this, "Latitude:"+mLatitude +" Longitude:"+mLongitude,Toast.LENGTH_LONG).show();
-                //finish();
+
                 break;
         }
     }

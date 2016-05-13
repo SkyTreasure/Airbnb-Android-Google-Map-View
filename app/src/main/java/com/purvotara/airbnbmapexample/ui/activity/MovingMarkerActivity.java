@@ -71,7 +71,10 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class MovingMarkerActivity extends AppCompatActivity implements OnMapReadyCallback,RoutingListener, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
+/**
+ * Created by skyrreasure on 12/5/16.
+ */
+public class MovingMarkerActivity extends AppCompatActivity implements OnMapReadyCallback, RoutingListener, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
     protected LatLng start;
     protected LatLng end;
@@ -84,8 +87,8 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
     private PlaceAutocompleteAdapter mAdapter;
     private ProgressDialog progressDialog;
     private List<Polyline> polylines;
-    private double mLatitude=12.321432423,mLongitude=77.2342345;
-    private double toLatitude,toLongitude;
+    private double mLatitude = 12.321432423, mLongitude = 77.2342345;
+    private double toLatitude, toLongitude;
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
     private static final String LOG_TAG = "MovingMarkerActivity";
     protected GoogleApiClient mGoogleApiClient;
@@ -135,13 +138,7 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
             return;
         }
         locationManager.requestLocationUpdates(
@@ -150,13 +147,8 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                     @Override
                     public void onLocationChanged(Location location) {
 
-                       /* CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);*/
-                        mLatitude=location.getLatitude();
-                        mLongitude=location.getLongitude();
+                        mLatitude = location.getLatitude();
+                        mLongitude = location.getLongitude();
                     }
 
                     @Override
@@ -180,13 +172,9 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                 3000, 0, new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
-                        /*CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude()));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(12);
 
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);*/
-                        mLatitude=location.getLatitude();
-                        mLongitude=location.getLongitude();
+                        mLatitude = location.getLatitude();
+                        mLongitude = location.getLongitude();
 
                     }
 
@@ -247,9 +235,9 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
 
-                        start=place.getLatLng();
-                        mLatitude=place.getLatLng().latitude;
-                        mLongitude=place.getLatLng().longitude;
+                        start = place.getLatLng();
+                        mLatitude = place.getLatLng().latitude;
+                        mLongitude = place.getLatLng().longitude;
                     }
                 });
 
@@ -280,10 +268,10 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                         }
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
-                        toLatitude=place.getLatLng().latitude;
-                        toLongitude=place.getLatLng().longitude;
+                        toLatitude = place.getLatLng().latitude;
+                        toLongitude = place.getLatLng().longitude;
 
-                        end=place.getLatLng();
+                        end = place.getLatLng();
                     }
                 });
 
@@ -325,9 +313,8 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
 
-                if(end!=null)
-                {
-                    end=null;
+                if (end != null) {
+                    end = null;
                 }
             }
 
@@ -339,22 +326,6 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
 
 
     }
-
-
-    private void addDefaultLocations() {
-        addMarkerToMap(new LatLng(50.961813797827055, 3.5168474167585373));
-        addMarkerToMap(new LatLng(50.96085423274633, 3.517405651509762));
-        addMarkerToMap(new LatLng(50.96020550146382, 3.5177918896079063));
-        addMarkerToMap(new LatLng(50.95936754348453, 3.518972061574459));
-        addMarkerToMap(new LatLng(50.95877285446026, 3.5199161991477013));
-        addMarkerToMap(new LatLng(50.958179213755905, 3.520646095275879));
-        addMarkerToMap(new LatLng(50.95901719316589, 3.5222768783569336));
-        addMarkerToMap(new LatLng(50.95954430150347, 3.523542881011963));
-        addMarkerToMap(new LatLng(50.95873336312275, 3.5244011878967285));
-        addMarkerToMap(new LatLng(50.95955781702322, 3.525688648223877));
-        addMarkerToMap(new LatLng(50.958855004782116, 3.5269761085510254));
-    }
-
 
     private Animator animator = new Animator();
 
@@ -375,24 +346,10 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
 
                     if (++currentPt < markers.size()) {
 
-//						//Get the current location
-//						Location startingLocation = new Location("starting point");
-//						startingLocation.setLatitude(googleMap.getCameraPosition().target.latitude);
-//						startingLocation.setLongitude(googleMap.getCameraPosition().target.longitude);
-//
-//						//Get the target location
-//						Location endingLocation = new Location("ending point");
-//						endingLocation.setLatitude(markers.get(currentPt).getPosition().latitude);
-//						endingLocation.setLongitude(markers.get(currentPt).getPosition().longitude);
-//
-//						//Find the Bearing from current location to next location
-//						float targetBearing = startingLocation.bearingTo(endingLocation);
 
                         float targetBearing = bearingBetweenLatLngs(mGoogleMap.getCameraPosition().target, markers.get(currentPt).getPosition());
 
                         LatLng targetLatLng = markers.get(currentPt).getPosition();
-                        //float targetZoom = zoomBar.getProgress();
-
 
                         System.out.println("currentPt  = " + currentPt);
                         System.out.println("size  = " + markers.size());
@@ -413,10 +370,9 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                         System.out.println("Animate to: " + markers.get(currentPt).getPosition() + "\n" +
                                 "Bearing: " + targetBearing);
 
-                        //markers.get(currentPt).showInfoWindow();
 
                     } else {
-                        //info.setText("onFinish()");
+
                     }
 
                 }
@@ -427,19 +383,11 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
     public void onMapReady(GoogleMap googleMap) {
         mGoogleMap = googleMap;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
             return;
         }
-        //addDefaultLocations();
+
         mGoogleMap.setMyLocationEnabled(true);
-        // mGoogleMap.setInfoWindowAdapter(new IconizedWindowAdapter(getLayoutInflater()));
-        //animator.startAnimation(true);
 
         mGoogleMap.setOnCameraChangeListener(new GoogleMap.OnCameraChangeListener() {
             @Override
@@ -586,8 +534,6 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
             long elapsed = SystemClock.uptimeMillis() - start;
             double t = interpolator.getInterpolation((float) elapsed / ANIMATE_SPEEED);
 
-//			LatLng endLatLng = getEndLatLng();
-//			LatLng beginLatLng = getBeginLatLng();
 
             double lat = t * endLatLng.latitude + (1 - t) * beginLatLng.latitude;
             double lng = t * endLatLng.longitude + (1 - t) * beginLatLng.longitude;
@@ -599,9 +545,6 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                 updatePolyLine(newPosition);
             }
 
-            // It's not possible to move the marker + center it through a cameraposition update while another camerapostioning was already happening.
-            //navigateToPoint(newPosition,tilt,bearing,currentZoom,false);
-            //navigateToPoint(newPosition,false);
 
             if (t < 1) {
                 mHandler.postDelayed(this, 16);
@@ -663,9 +606,7 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
         }
 
         private void adjustCameraPosition() {
-            //System.out.println("tilt = " + tilt);
-            //System.out.println("upward = " + upward);
-            //System.out.println("zoom = " + zoom);
+
             if (upward) {
 
                 if (tilt < 90) {
@@ -808,47 +749,31 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
 
 
     @OnClick(R.id.send)
-    public void sendRequest()
-    {
-        if(Util.Operations.isOnline(this))
-        {
+    public void sendRequest() {
+        if (Util.Operations.isOnline(this)) {
             route();
-        }
-        else
-        {
-            Toast.makeText(this,"No internet connectivity",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "No internet connectivity", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void route()
-    {
-        if(start==null || end==null)
-        {
-            if(start==null)
-            {
-                if(starting.getText().length()>0)
-                {
+    public void route() {
+        if (start == null || end == null) {
+            if (start == null) {
+                if (starting.getText().length() > 0) {
                     starting.setError("Choose location from dropdown.");
-                }
-                else
-                {
-                    Toast.makeText(this,"Please choose a starting point.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Please choose a starting point.", Toast.LENGTH_SHORT).show();
                 }
             }
-            if(end==null)
-            {
-                if(destination.getText().length()>0)
-                {
+            if (end == null) {
+                if (destination.getText().length() > 0) {
                     destination.setError("Choose location from dropdown.");
-                }
-                else
-                {
-                    Toast.makeText(this,"Please choose a destination.",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Please choose a destination.", Toast.LENGTH_SHORT).show();
                 }
             }
-        }
-        else
-        {
+        } else {
             progressDialog = ProgressDialog.show(this, "Please wait.",
                     "Fetching route information.", true);
             Routing routing = new Routing.Builder()
@@ -859,7 +784,7 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
                     .build();
             routing.execute();
 
-            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mLatitude,mLongitude));
+            CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(mLatitude, mLongitude));
             CameraUpdate zoom = CameraUpdateFactory.zoomTo(14);
 
             mGoogleMap.moveCamera(center);
@@ -874,9 +799,9 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
     public void onRoutingFailure(RouteException e) {
         // The Routing request failed
         progressDialog.dismiss();
-        if(e != null) {
+        if (e != null) {
             Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-        }else {
+        } else {
             Toast.makeText(this, "Something went wrong, Try again", Toast.LENGTH_SHORT).show();
         }
     }
@@ -897,7 +822,7 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
         mGoogleMap.moveCamera(center);
 
 
-        if(polylines.size()>0) {
+        if (polylines.size() > 0) {
             for (Polyline poly : polylines) {
                 poly.remove();
             }
@@ -905,49 +830,45 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
 
         polylines = new ArrayList<>();
 
-        for(LatLng pt:route.get(0).getPoints()){
+        for (LatLng pt : route.get(0).getPoints()) {
             MarkerOptions options = new MarkerOptions();
             options.position(pt);
 
-            //options.icon(BitmapDescriptorFactory.fromResource(R.drawable.start_blue));
-            Marker marker= mGoogleMap.addMarker(options);
+            Marker marker = mGoogleMap.addMarker(options);
             markers.add(marker);
             marker.setVisible(false);
         }
-        //add route(s) to the map.
-        //for (int i = 0; i <route.size(); i++) {
-            int i=0;
-            //In case of more than 5 alternative routes
-            int colorIndex = 1 % COLORS.length;
 
-            PolylineOptions polyOptions = new PolylineOptions();
-            polyOptions.color(getResources().getColor(COLORS[colorIndex]));
-            polyOptions.width(10 + i * 3);
-            polyOptions.addAll(route.get(i).getPoints());
-            Polyline polyline = mGoogleMap.addPolyline(polyOptions);
-            polylines.add(polyline);
+        int i = 0;
+        //In case of more than 5 alternative routes
+        int colorIndex = 1 % COLORS.length;
 
-             Toast.makeText(getApplicationContext(),"Route "+ (i+1) +": distance - "+ route.get(i).getDistanceValue()+": duration - "+ route.get(i).getDurationValue(),Toast.LENGTH_SHORT).show();
-        //}
+        PolylineOptions polyOptions = new PolylineOptions();
+        polyOptions.color(getResources().getColor(COLORS[colorIndex]));
+        polyOptions.width(10 + i * 3);
+        polyOptions.addAll(route.get(i).getPoints());
+        Polyline polyline = mGoogleMap.addPolyline(polyOptions);
+        polylines.add(polyline);
+
+        Toast.makeText(getApplicationContext(), "Route " + (i + 1) + ": distance - " + route.get(i).getDistanceValue() + ": duration - " + route.get(i).getDurationValue(), Toast.LENGTH_SHORT).show();
+
 
         // Start marker
         MarkerOptions options = new MarkerOptions();
         options.position(start);
         options.icon(BitmapDescriptorFactory.fromResource(R.drawable.start_blue));
-        Marker startMarker= mGoogleMap.addMarker(options);
-       // markers.add(startMarker);
+        Marker startMarker = mGoogleMap.addMarker(options);
+
 
         // End marker
         options = new MarkerOptions();
         options.position(end);
         options.icon(BitmapDescriptorFactory.fromResource(R.drawable.end_green));
-        Marker endMarker= mGoogleMap.addMarker(options);
-        //markers.add(endMarker);
+        Marker endMarker = mGoogleMap.addMarker(options);
+
 
         animator.startAnimation(false);
     }
-
-
 
 
     @Override
@@ -958,7 +879,7 @@ public class MovingMarkerActivity extends AppCompatActivity implements OnMapRead
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
 
-        Log.v(LOG_TAG,connectionResult.toString());
+        Log.v(LOG_TAG, connectionResult.toString());
     }
 
     @Override

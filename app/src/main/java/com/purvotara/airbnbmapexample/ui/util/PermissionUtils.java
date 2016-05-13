@@ -15,7 +15,7 @@ import com.purvotara.airbnbmapexample.R;
 
 
 /**
- * Created by akash on 1/4/16.
+ * Created by skyrreasure on 1/4/16.
  */
 public abstract class PermissionUtils {
 

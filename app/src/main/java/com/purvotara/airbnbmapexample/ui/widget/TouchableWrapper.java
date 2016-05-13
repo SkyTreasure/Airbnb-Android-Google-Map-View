@@ -9,7 +9,7 @@ import com.purvotara.airbnbmapexample.ui.activity.SearchPlaceOnMapActivity;
 
 
 /**
- * Created by akash on 1/4/16.
+ * Created by skyrreasure on 1/4/16.
  */
 public class TouchableWrapper extends FrameLayout {
     private static final long SCROLL_TIME = 200L; // 200 Milliseconds, but you can adjust that to your liking
