@@ -12,8 +12,8 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_where_am_i"
-        android:title="Where Am I?"
+        android:id="@+id/action_moving_marker"
+        android:title="Moving Markers on Map"
         app:showAsAction="never" />
 
     <item

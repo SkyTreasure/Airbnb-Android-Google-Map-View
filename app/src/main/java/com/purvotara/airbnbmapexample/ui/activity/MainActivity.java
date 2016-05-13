@@ -375,6 +375,12 @@ public class MainActivity extends AppCompatActivity implements
             startActivity(i);
             return true;
         }
+        if(id== R.id.action_moving_marker){
+            Intent i=new Intent(MainActivity.this,MovingMarkerActivity.class);
+            startActivity(i);
+            return true;
+
+        }
         return super.onOptionsItemSelected(item);
     }
 

@@ -59,20 +59,26 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
 
 
     protected GoogleMap map;
+
     protected LatLng start;
     protected LatLng end;
-    @InjectView(R.id.start)
+       @InjectView(R.id.start)
     AutoCompleteTextView starting;
     @InjectView(R.id.destination)
     AutoCompleteTextView destination;
     @InjectView(R.id.send)
     ImageView send;
-    private static final String LOG_TAG = "MyActivity";
-    protected GoogleApiClient mGoogleApiClient;
     private PlaceAutocompleteAdapter mAdapter;
     private ProgressDialog progressDialog;
+
+
+    private static final String LOG_TAG = "ShowDirectionActivity";
+    protected GoogleApiClient mGoogleApiClient;
+
+
     private List<Polyline> polylines;
     private double mLatitude=12.321432423,mLongitude=77.2342345;
+    private double toLatitude,toLongitude;
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
 
 
@@ -82,7 +88,7 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
         setContentView(R.layout.activity_show_direction);
         ButterKnife.inject(this);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setTitle("Show Direction");
+        getSupportActionBar().setTitle("Show Direction Example");
 
         polylines = new ArrayList<>();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -272,6 +278,8 @@ public class ShowDirectionActivity extends AppCompatActivity implements RoutingL
                         }
                         // Get the Place object from the buffer.
                         final Place place = places.get(0);
+                        toLatitude=place.getLatLng().latitude;
+                        toLongitude=place.getLatLng().longitude;
 
                         end=place.getLatLng();
                     }

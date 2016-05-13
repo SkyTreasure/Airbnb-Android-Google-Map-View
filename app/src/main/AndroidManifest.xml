@@ -38,7 +38,8 @@
             android:name=".ui.activity.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".ui.activity.SearchPlaceOnMapActivity" />
-        <activity android:name=".ui.activity.ShowDirectionActivity"></activity>
+        <activity android:name=".ui.activity.ShowDirectionActivity" />
+        <activity android:name=".ui.activity.MovingMarkerActivity"></activity>
     </application>
 
 </manifest>
