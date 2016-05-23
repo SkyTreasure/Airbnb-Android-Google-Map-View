@@ -1,7 +1,16 @@
 # Airbnb-Map-View
 This is a sample Android Application which has Map view similar to what AirBnb has.
+ 
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248843/011d8c6a-193a-11e6-8509-23441a649b66.png" width="400" height="800" />
 
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248846/059a4350-193a-11e6-89dd-64c03ff301ee.png" width="400" height="800" />
 
-![alt tag](https://cloud.githubusercontent.com/assets/1933684/14560363/f391ffb8-032c-11e6-982f-7b2498f2de38.png)
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248852/0895a52c-193a-11e6-8362-3ea2aedc4a96.png" width="400" height="800" />
+
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248858/0cf4247c-193a-11e6-8ee3-f01cb67b3313.png" width="400" height="800" />
+
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248861/11e35476-193a-11e6-800f-a20216091a03.png" width="400" height="800" />
+
+<img src="https://cloud.githubusercontent.com/assets/1933684/15248864/170f846a-193a-11e6-9071-0e6cbd5ac93e.png" width="400" height="800" />
  
  
