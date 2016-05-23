@@ -368,6 +368,11 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        /*if(id == R.id.action_home){
+            Intent i=new Intent(MainActivity.this,MainActivity.class);
+            startActivity(i);
+            return true;
+        }*/
         if (id == R.id.action_search) {
             Intent i=new Intent(MainActivity.this,SearchPlaceOnMapActivity.class);
             startActivity(i);
@@ -380,6 +385,12 @@ public class MainActivity extends AppCompatActivity implements
         }
         if(id== R.id.action_moving_marker){
             Intent i=new Intent(MainActivity.this,MovingMarkerActivity.class);
+            startActivity(i);
+            return true;
+
+        }
+        if(id == R.id.action_list_view){
+            Intent i=new Intent(MainActivity.this,ListViewActivity.class);
             startActivity(i);
             return true;
 

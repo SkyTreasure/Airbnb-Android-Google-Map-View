@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:title="Map and Viewpager"
+        app:showAsAction="never" />
+
     <item
         android:id="@+id/action_search"
         android:title="Search Places"
@@ -17,7 +23,9 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_custom"
-        android:title="Markers and Viewpager"
+        android:id="@+id/action_list_view"
+        android:title="List View"
         app:showAsAction="never" />
+
+
 </menu>
