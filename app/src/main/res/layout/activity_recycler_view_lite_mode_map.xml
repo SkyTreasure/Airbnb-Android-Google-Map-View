@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recycler_view_lite_mode_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.purvotara.airbnbmapexample.ui.activity.RecyclerViewLiteModeMapActivity">
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+
+</RelativeLayout>

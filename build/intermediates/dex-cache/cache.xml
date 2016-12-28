@@ -1,2 +1,365 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.3.0_5a14fc1d62b6f21c58116a8d8d019c1ea2a27087.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9fe026fb4c7fce21bc5142f6e1bdf844f28061ac">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-8.4.0_5ab0b4d22e1d4d26c36dcb72aab2c373c3414eb4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.3.0_faa53d14ec9c9f0cef3d2906ec29629f65ab201a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1c9f35e952b212c843f7bd2c7eec8e82ad95602e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-8.4.0_9e513709a38e1f131ab4e714603077c72d9160c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_e527ecb899cf9d04641e8eb7d775dc943ead5f08.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b82b8e847173c28efffcd291b2a0b1ae9ad17fa4">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-8.4.0_2ff984d50da7355c1e0e205a7303649d17932302.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dfecc4d835cdabcdecf7e95f0d20a3ef1e9d8ef4">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-8.4.0_49e4135b426a08aa1a786c5258bcabe378da78f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="2d7fe76982677315c4dc4edfb459c8ca718a9d4c">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-8.4.0_42b278e3e2f1ea1ae190c0ce57210605e2649c11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.3.0_bd5b60fe8c974c0de7e89918438bb9f0ea593601.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-8.4.0_f3bb83995a9188b1772881e7a5ceef794d9830d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c54246475c1bb64ac6857d1320364bfbfeda2c46">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-8.4.0_003664c864d4c7dee908d44db47ded88d4ea6c66.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_3bb2946d162bf969498c8a485c2c24064f73138a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.github.jd-alexander/library/1.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bde00e92c4a5a0a1075df7404248ccb30fc7e62b">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.github.jd-alexander-library-1.1.0_bc14bda337043f618891b7e6bddff31ca8bfd014.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f2df436a8f02ce7e4d7d209671fc45f97c470f0e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-8.4.0_913cc77617ae9407d417b955c381e9a97cc87651.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.3.0_0dafc77f332b3c88b9f42743618b86dbd7974fce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/jars/libs/internal_impl-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/internal_impl-23.3.0_64f58376bf366b2150c6e3c3faaad78066b57581.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/gson-2.4_f0deef42bfe20f07dafec6d4b5e3c5c97aa12b24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0194a7409c40de94fb539d4ad9928ec5d47afeb7">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-8.4.0_7ed68d69c8e69ca9cca039eb92554b3c422214ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-8.4.0_0fb88f6fe14e363885b5af0525f5a951dd2f91ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a364cc6b698d1b3b2d284f64618daaa7fe77ddf">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-8.4.0_0074d63e4ec37edaf4d61c4ca765f995ab9f794d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-8.4.0_b0d23721f3cc4e361f3028bc2cab599557f49774.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.4.0_873743d322cc5b2ea5cfc40d795cf089c1fbf271.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="b36f30ac5ee5d5214f4b1e2ac49f11889d58e71a">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-8.4.0_c074f7aa2e54dbdf7b8ebbb50766c6bbf6fe8566.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/library-1.0.19_9b32494502d181527dfb838e904bfc26bf90ca3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.3.0_585983da334c37231b0ec6e14f7f3905999245a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.airbnb.android/airmapview/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8bd8cbcbfd163a5bfa698ad4c0a37963fb5bf8c3">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.airbnb.android-airmapview-1.3.0_fb882b35d5f3bd9924dd4954e3cecf8f263a7a28.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.3.0_974246f22cc18e9f497d6aa4f132c1e17ecfa238.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.3.0/support-annotations-23.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/support-annotations-23.3.0_fb0a8d04e8fb486a4483c33eab377a34a0574718.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="966e5771a5a2ebfb31bf00d7cd6cd2546d245517">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-8.4.0_8ba2b29d6eb136508b96974d3755d2571d859fb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-8.4.0_e154ad7386b6ae316667f2cef35a983b802c39c8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1a78298e7724d5440d210bcb946b3493250d354d">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-8.4.0_5c67fcb1064e4de2f859f0ad5bc3f79f42898cb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-23.0.0_4c5cbb74ec749d8f899f8215568643b77945cefd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d34b2d135c1cc96ab506fd8bf6916d1e2f391a">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-8.4.0_7ca8c7c9fb5ce9538a780ca5301e2f3eb1fd134e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="613298b7aa012f121ce542881c0a599ebd8078f2">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-measurement-8.4.0_0b74c2476a19d1b98a7f07b18d14b64336f39c3e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/6.1.0/63735f48b82bcd24cdd33821342428252eb1ca5a/butterknife-6.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="63735f48b82bcd24cdd33821342428252eb1ca5a">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/butterknife-6.1.0_973dbcdf6172f1594dcb4eac44aa03a168305702.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_85e7bc83ef22c105c8becbae456e92901d0bc92c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.3.0_f2070472847e4e6eb71411f2895b9f9ee45ba88f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9cad249cf62751a323d9af568caf12284b7d6062">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-8.4.0_13be395b3d0243d4611063b8cdf54edac682d084.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.maps.android/android-maps-utils/0.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4b1a7fac58cc85b115adee653a10b6300f90951a">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.maps.android-android-maps-utils-0.4_dab03922eb5fb5ebbdea4a6adec7e06052344971.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="551e78f21acf69ebfb489c0e79647824c838013e">
+        <dex dex="/home/akash/Desktop/Purvo/MyGitHub/Airbnb-Map-View/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-8.4.0_4b40b7f3323aff7044cbfd33902c262ef453ca18.jar" />
+    </item>
+
+</items>

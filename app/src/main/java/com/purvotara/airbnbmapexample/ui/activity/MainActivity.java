@@ -395,6 +395,11 @@ public class MainActivity extends AppCompatActivity implements
             return true;
 
         }
+        if(id==R.id.action_lite_mode){
+            Intent i=new Intent(MainActivity.this,RecyclerViewLiteModeMapActivity.class);
+            startActivity(i);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

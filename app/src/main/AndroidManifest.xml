@@ -40,7 +40,8 @@
         <activity android:name=".ui.activity.SearchPlaceOnMapActivity" />
         <activity android:name=".ui.activity.ShowDirectionActivity" />
         <activity android:name=".ui.activity.MovingMarkerActivity" />
-        <activity android:name=".ui.activity.ListViewActivity"></activity>
+        <activity android:name=".ui.activity.ListViewActivity" />
+        <activity android:name=".ui.activity.RecyclerViewLiteModeMapActivity"></activity>
     </application>
 
 </manifest>

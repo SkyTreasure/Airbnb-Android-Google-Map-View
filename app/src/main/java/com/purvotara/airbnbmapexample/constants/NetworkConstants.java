@@ -5,7 +5,7 @@ package com.purvotara.airbnbmapexample.constants;
  */
 public class NetworkConstants {
 
-    public static final String ADDRESS_URL = "http://purvotara.net/androidsync/deal.json";
+    public static final String ADDRESS_URL = "https://sky-firebase.firebaseapp.com/addresses.json";
 
     public static final String ERROR_MESSAGE = "error_msg";
     public static final String ADDRESS = "address";

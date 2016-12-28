@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Complete GoogleMap Examples</string>
+    <string name="app_name">GoogleMap Collections</string>
     <string name="title_activity_maps">Map</string>
 
     <!--    Permissions    -->
