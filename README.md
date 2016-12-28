@@ -1,5 +1,9 @@
 # Airbnb-Map-View
 This is a sample Android Application which has Google Map view similar to what AirBnb Android Application. Moving Markers like Uber/Ola. Custom Google Search for places. Recycler view with Animations added.
+
+[New] Google maps in Recycler view (Lite mode)
+
+<img src="https://cloud.githubusercontent.com/assets/1933684/21518384/14cadad4-cd0c-11e6-81a1-04777ee36438.png" width="400" height="800"/>
  
 <img src="https://cloud.githubusercontent.com/assets/1933684/15248843/011d8c6a-193a-11e6-8509-23441a649b66.png" width="400" height="800" />
 
